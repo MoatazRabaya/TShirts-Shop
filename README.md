@@ -41,26 +41,47 @@ The shop owner wants to know how many shirts have been sold for each size.
 
 ---
 Tshirt (abstract)
+
 ├── TshirtChinaSmall
+
 ├── TshirtChinaMedium
+
 ├── TshirtChinaLarge
+
 ├── TshirtAsiaSmall
+
 ├── TshirtAsiaMedium
+
 ├── TshirtAsiaLarge
+
 ├── TshirtMiddleEastSmall
+
 ├── TshirtMiddleEastMedium
+
 └── TshirtMiddleEastLarge
 
+
 TshirtDecorator (abstract) extends Tshirt
+
 ├── TshirtRedDecorator
+
 ├── TshirtBlueDecorator
+
 ├── TshirtLogoDecorator
+
 └── TshirtTextDecorator
 
+
 TshirtFactory (abstract)
+
 ├── TshirtFactoryChinaStandard
+
 ├── TshirtFactoryAsiaStandard
+
 └── TshirtFactoryMiddleEastStandard
 
+
 SalesManagement implements Subject (singleton)
+
+
 ShopOwner implements Observer
