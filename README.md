@@ -40,40 +40,27 @@ The shop owner wants to know how many shirts have been sold for each size.
    Used for the `SalesManagement` class to make sure there is only one object managing sales.
 
 ---
+Tshirt (abstract)
+├── TshirtChinaSmall
+├── TshirtChinaMedium
+├── TshirtChinaLarge
+├── TshirtAsiaSmall
+├── TshirtAsiaMedium
+├── TshirtAsiaLarge
+├── TshirtMiddleEastSmall
+├── TshirtMiddleEastMedium
+└── TshirtMiddleEastLarge
 
+TshirtDecorator (abstract) extends Tshirt
+├── TshirtRedDecorator
+├── TshirtBlueDecorator
+├── TshirtLogoDecorator
+└── TshirtTextDecorator
 
- TshirtShopProject/
-  ├── Main.java
-  │
-  ├── tshirt/
-  │   ├── Tshirt.java
-  │   ├── TshirtDecorator.java
-  │   ├── TshirtRedDecorator.java
-  │   ├── TshirtBlueDecorator.java
-  │   ├── TshirtLogoDecorator.java
-  │   ├── TshirtTextDecorator.java
-  │
-  ├── factory/
-  │   ├── TshirtFactory.java
-  │   ├── TshirtFactoryChinaStandard.java
-  │   ├── TshirtFactoryAsiaStandard.java
-  │   ├── TshirtFactoryMiddleEastStandard.java
-  │
-  ├── products/
-  │   ├── TshirtChinaSmall.java
-  │   ├── TshirtChinaMedium.java
-  │   ├── TshirtChinaLarge.java
-  │   ├── TshirtAsiaSmall.java
-  │   ├── TshirtAsiaMedium.java
-  │   ├── TshirtAsiaLarge.java
-  │   ├── TshirtMiddleEastSmall.java
-  │   ├── TshirtMiddleEastMedium.java
-  │   ├── TshirtMiddleEastLarge.java
-  │
-  ├── observer/
-  │   ├── Observer.java
-  │   ├── Subject.java
-  │   ├── SalesManagement.java
-  │   ├── ShopOwner.java
+TshirtFactory (abstract)
+├── TshirtFactoryChinaStandard
+├── TshirtFactoryAsiaStandard
+└── TshirtFactoryMiddleEastStandard
 
-  └── README.md
+SalesManagement implements Subject (singleton)
+ShopOwner implements Observer
